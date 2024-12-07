@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./rock-paper-scissors.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p class="result">Select your choice!!!</p>
+    <div>
+      <span class="rps">
+        <div class="item rock" onclick="{handleSelect(event)}">✊</div>
+        <div class="item paper" onclick="{handleSelect(event)}">✋</div>
+        <div class="item scissors" onclick="{handleSelect(event)}">✌️</div>
+      </span>
+    </div>
+    <span class="fight" onclick="{handleFight()}"> Fight </span>
+    <span class="ans selected"></span>
+    <script src="./rock-paper-scissors.js"></script>
+  </body>
+</html>
