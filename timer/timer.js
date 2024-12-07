@@ -2,18 +2,21 @@ var timerInterval;
 
 function resetTiming() {
   clearInterval(timerInterval);
+  timerInterval = undefined;
   setBackgroundColorAndMessage("#fff", "Press to start");
   insertTime(0, 0);
 }
 
 function startTiming() {
   setBackgroundColorAndMessage("#abd194", "Running");
+  if (timerInterval) return;
   timerInterval = setInterval(updateTimer, 1000);
 }
 
 function stopTiming() {
   setBackgroundColorAndMessage("#f0beaa", "Stop!!!");
   clearInterval(timerInterval);
+  timerInterval = undefined;
 }
 
 function updateTimer() {
